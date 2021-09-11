@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S49-et-3fA">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Maps_and_Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sL7-44-SNY">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PT9-Yl-CK0">
+                                <rect key="frame" x="0.0" y="750" width="375" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybride"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentaction:" destination="BYZ-38-t0r" eventType="valueChanged" id="QWD-r5-CBY"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1M-tp-nQt">
+                                <rect key="frame" x="283.66666666666669" y="712" width="69" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="YVm-Ee-fBg"/>
+                                    <constraint firstAttribute="height" constant="30" id="wXO-mT-oMH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Zoom In">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ZoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jif-et-TeM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hze-5O-foP">
+                                <rect key="frame" x="22" y="712" width="69" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1P4-L6-EhU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="6VT-Bm-dtz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Zoom Out">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ZoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cn2-ln-Z5L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-bu-vJz">
+                                <rect key="frame" x="139.66666666666666" y="712" width="96" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MjH-2s-8zd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="My Location">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomToCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="em6-mS-Ipp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H1M-tp-nQt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VvL-bu-vJz" secondAttribute="trailing" constant="8" symbolic="YES" id="4mi-O4-C2D"/>
+                            <constraint firstItem="sL7-44-SNY" firstAttribute="leading" secondItem="hze-5O-foP" secondAttribute="trailing" constant="-91" id="58E-wV-B1m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H1M-tp-nQt" secondAttribute="trailing" constant="22.333333333333314" id="6kM-3o-IRf"/>
+                            <constraint firstItem="VvL-bu-vJz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hze-5O-foP" secondAttribute="trailing" constant="8" symbolic="YES" id="IFf-7x-uvH"/>
+                            <constraint firstItem="VvL-bu-vJz" firstAttribute="centerX" secondItem="sL7-44-SNY" secondAttribute="centerX" id="LaP-iQ-6Pz"/>
+                            <constraint firstItem="hze-5O-foP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="OQY-5W-l9u"/>
+                            <constraint firstItem="sL7-44-SNY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Sm1-k1-ZGl"/>
+                            <constraint firstItem="VvL-bu-vJz" firstAttribute="top" secondItem="H1M-tp-nQt" secondAttribute="top" id="ZXX-wL-sIQ"/>
+                            <constraint firstItem="VvL-bu-vJz" firstAttribute="top" secondItem="hze-5O-foP" secondAttribute="top" id="btC-FD-K1b"/>
+                            <constraint firstItem="PT9-Yl-CK0" firstAttribute="top" secondItem="H1M-tp-nQt" secondAttribute="bottom" constant="8" id="d5Z-Qo-51s"/>
+                            <constraint firstItem="sL7-44-SNY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eQa-OL-ywp"/>
+                            <constraint firstItem="PT9-Yl-CK0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ezd-sm-dMB"/>
+                            <constraint firstItem="sL7-44-SNY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mYX-1f-PIm"/>
+                            <constraint firstItem="hze-5O-foP" firstAttribute="width" secondItem="H1M-tp-nQt" secondAttribute="width" id="nCI-g1-FFi"/>
+                            <constraint firstItem="sL7-44-SNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oLu-C7-ueN"/>
+                            <constraint firstItem="PT9-Yl-CK0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="onx-jb-Egv"/>
+                            <constraint firstItem="PT9-Yl-CK0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wjA-YR-s5M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kQl-eZ-B7n">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="VEs-nq-4U6">
+                            <connections>
+                                <action selector="searchButton:" destination="BYZ-38-t0r" id="oG0-zm-kdE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MapKitView" destination="sL7-44-SNY" id="PCG-aX-3iy"/>
+                        <outlet property="segment" destination="PT9-Yl-CK0" id="tlU-Mn-SB3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925.60000000000002" y="28.817733990147783"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="glO-hm-YLh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S49-et-3fA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qfP-RC-Lz4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KAM-7s-IBV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gW7-pb-Shj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="29"/>
+        </scene>
+    </scenes>
+</document>
